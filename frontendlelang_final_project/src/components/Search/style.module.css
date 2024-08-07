@@ -1,0 +1,34 @@
+.search{
+    display: flex;
+    width: 400px;
+    /* margin-right: 230px; */
+}
+
+.rounded{
+    border-radius: 16px;
+    height: 36px;
+    background: #EEEEEE;
+    color: #8A8A8A;
+}
+
+.styleIcon{
+    position: relative;
+    transform: translate(-200%,0);
+    display: flex;
+}
+
+
+@media screen and (max-width:991px) {
+    .search{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width:1280px) {
+    .search{
+        display: flex;
+        width: 400px;
+        margin-right: 230px;
+    }
+}

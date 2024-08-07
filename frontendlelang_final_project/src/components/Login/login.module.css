@@ -1,0 +1,112 @@
+.login {
+    background: #FAD56C;
+}
+
+.loginh1{
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: -50px;
+}
+
+.loginh2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.styleCol1 {
+    font-family: poppins;
+    background-color: #FAD56C;
+    background-image: url(./Subtract.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.roundedForm {
+    border-radius: 16px;
+    height: 48px;
+}
+
+.roundedButton {
+    border-radius: 16px;
+    background: #F93711;
+    border: none;
+    width: 100%;
+    height: 48px;
+    margin-top: 3%;
+}
+
+a {
+    text-decoration: none;
+    color: #F93711;
+
+}
+
+.iconSpan {
+    position: absolute;
+    margin-top: 0.8%;
+    margin-left: 34.5%;
+}
+
+.styleCol {
+    height: 100%;
+}
+
+.image {
+    height: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .styleCol1 {
+        display: none;
+    }
+
+    img {
+        display: none;
+    }
+
+    .iconSpan {
+        position: absolute;
+        margin-top: 1%;
+        margin-left: 57%;
+    }
+
+    .loginh1{
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: -50px;
+        text-align: center;
+    }
+
+    .loginh2{
+        font-size: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .iconSpan {
+        position: absolute;
+        margin-top: 3%;
+        margin-left: 63%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .iconSpan {
+        position: absolute;
+        margin-top: 3%;
+        margin-left: 63%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .iconSpan {
+        position: absolute;
+        margin-top: 3%;
+        margin-left: 63%;
+    }
+}

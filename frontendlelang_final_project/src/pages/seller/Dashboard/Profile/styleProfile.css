@@ -1,0 +1,101 @@
+.button-save {
+    width: 568px;
+    background: #F93711;
+    border-radius: 16px;
+    border: none;
+    height: 48px;
+    margin-bottom: 24px;
+}
+
+.form-profile {
+    width: 568px;
+}
+
+.content {
+    margin-left: 50px;
+}
+
+.profile-input {
+    background-color: transparent;
+    border: none;
+
+    /* width: 144px;
+    height: 144px;
+    background-color: #FAD56C;
+    border-radius: 80px;
+    border-color: #FAD56C; */
+    margin-bottom: 29px;
+}
+
+.profile-input:hover {
+    background-color: transparent;
+    border: none;
+    
+    /* width: 144px;
+    height: 144px;
+    background-color: #FAD56C;
+    border-radius: 80px;
+    border-color: #FAD56C; */
+}
+
+.rounded-circle{
+    height: 144px;
+    width: 144px;
+}
+
+@media only screen and (max-width: 600px) {
+    .button-save {
+        width: 328px;
+        background: #F93711;
+        border-radius: 16px;
+        border: none;
+        height: 48px;
+        margin-bottom: 24px;
+    }
+
+    .content {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .photo-profile {
+        width: 96px;
+        height: auto;
+    }
+
+    .form-profile {
+        width: 328px;
+        /* margin: 0; */
+        /* margin-left: 20px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+/*     
+    .previous {
+        display: none;
+    } */
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
