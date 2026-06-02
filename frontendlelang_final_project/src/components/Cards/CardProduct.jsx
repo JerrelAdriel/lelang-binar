@@ -7,7 +7,7 @@ import axios from 'axios'
 import { Link } from "react-router-dom";
 import { Rupiah } from '../CostumFunction/Rupiah';
 import { MdFavorite } from 'react-icons/md';
-import jwt from 'jwt-decode'
+import { jwtDecode as jwt } from 'jwt-decode'
 const { REACT_APP_API_URL } = process.env
 
 function CardComponent() {
