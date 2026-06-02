@@ -10,7 +10,7 @@ function NavScroll(props) {
         <Navbar
             className='sticky-top'
             bg="light" expand="lg">
-            <Container lg className={styleNavBuyer.containerNavSell}>
+            <Container fluid="lg" className={styleNavBuyer.containerNavSell}>
                 <div className={styleNavBuyer.dashboardMenu}>
                     <DashboardMenu />
                 </div>
