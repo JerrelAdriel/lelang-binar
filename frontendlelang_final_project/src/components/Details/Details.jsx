@@ -14,6 +14,7 @@ import PopUp from './popup/PopUp';
 import Login from '../ButtonLogin/ButtonLogin';
 import Navbar from '../NavbarBeforeLogin/NavbarDashboard';
 import { Rupiah } from '../CostumFunction/Rupiah';
+import { getDummyProductById } from '../../dummyProducts';
 
 const { REACT_APP_API_URL } = process.env
 
@@ -29,22 +30,28 @@ function SellerHome() {
 
     const Detail = async () => {
         setLoading(true)
+        const applyDummy = (msg = '') => {
+            const dummy = getDummyProductById(productId);
+            if (msg) console.log('Pakai data dummy:', msg);
+            setItem(dummy);
+            setCategory(dummy.categories);
+            setSeller(dummy.users);
+            setImages(dummy.images);
+            setLoading(false);
+        };
         try {
-            await axios.get(url + productId)
-                .then(res => {
-                    setItem(res.data.data.product);
-                    setCategory(res.data.data.product.categories);
-                    setSeller(res.data.data.product.users);
-                    setImages(res.data.data.product.images);
-                    // console.log(images, 'null')
-                })
-                .catch(error => {
-                    console.log(error)
-                })
-            setLoading(false)
+            const res = await axios.get(url + productId, { timeout: 3000 });
+            if (res?.data?.data?.product) {
+                setItem(res.data.data.product);
+                setCategory(res.data.data.product.categories);
+                setSeller(res.data.data.product.users);
+                setImages(res.data.data.product.images || []);
+                setLoading(false);
+            } else {
+                applyDummy('empty response');
+            }
         } catch (error) {
-            setLoading(true);
-            console.log(error)
+            applyDummy(error.message);
         }
     }
 
@@ -92,7 +99,7 @@ function SellerHome() {
 
                     <Col className={Style.desc}>
                         <div className={Style.sellerProfile}>
-                            <img className={Style.sellerPhoto} src={seller.image_url===''? 'Loading...' : seller.image_url} alt="" />
+                            <img className={Style.sellerPhoto} src={seller && seller.image_url ? seller.image_url : NoImage} alt="seller" />
                             <div className='ms-3'>
                                 <h2 className={Style.sellerName}>
                                     {seller.full_name? seller.full_name : 'Loading...'}
