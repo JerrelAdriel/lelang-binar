@@ -103,19 +103,18 @@ function PopUp() {
                     <div className={stylePopup.overlay} onClick={togglePopup}></div>
                     <div className={stylePopup.modalContent}>
                         {submitted ? (
-                            <div style={{ textAlign: 'center', padding: '20px 0' }}>
-                                <div style={{ fontSize: 56, marginBottom: 12 }}>✅</div>
-                                <strong style={{ fontSize: 18 }}>Tawaran Terkirim!</strong>
-                                <p style={{ color: '#666', marginTop: 12 }}>
+                            <div className={stylePopup.successWrap}>
+                                <div className={stylePopup.successIcon}>✅</div>
+                                <h3 className={stylePopup.successTitle}>Tawaran Terkirim!</h3>
+                                <p className={stylePopup.successText}>
                                     Penawaran kamu sebesar <b>{formatRupiah(bidPrice)}</b> sudah dikirim ke penjual.
                                 </p>
-                                <p style={{ color: '#666', fontSize: 13 }}>
+                                <p className={`${stylePopup.successText} ${stylePopup.small}`}>
                                     Penjual akan menghubungi kamu jika harganya cocok.
                                 </p>
                                 <button
                                     className={stylePopup.roundedButtonSend}
                                     onClick={togglePopup}
-                                    style={{ marginTop: 16 }}
                                 >
                                     Tutup
                                 </button>

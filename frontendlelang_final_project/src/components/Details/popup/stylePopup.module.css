@@ -1,5 +1,37 @@
-* {
+.modalContent {
     font-size: 14px;
+}
+
+.modalContent p {
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+}
+
+/* Success state */
+.successWrap {
+    text-align: center;
+    padding: 24px 0 8px;
+}
+.successIcon {
+    font-size: 56px;
+    margin-bottom: 14px;
+}
+.successTitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    color: #222;
+}
+.successText {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0 0 10px 0;
+}
+.successText.small {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 20px;
 }
 
 .roundedButtonSend {
